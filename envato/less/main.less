@@ -1,0 +1,32 @@
+body{
+  background: url(../img/fon-top.png) no-repeat;
+  background-size: contain;
+}
+.card-block{
+  padding: 15px 70px;
+  border: 2px solid #83b63f;
+  border-radius: 15px;
+  min-height: 175px;
+  span{
+    color: #fff;
+    font-weight: 100;
+  }
+  &:hover{
+    background: green;
+  }
+}
+.font(@fz: 25px) { // миксин или примесь, не используется в проекте, а служит классом со стилями
+  font-size: @fz;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+@background:#0f0f0f; // переменная
+
+.header{
+  .font(15px);
+  color: @background;
+}
+span{
+  .font();
+}
